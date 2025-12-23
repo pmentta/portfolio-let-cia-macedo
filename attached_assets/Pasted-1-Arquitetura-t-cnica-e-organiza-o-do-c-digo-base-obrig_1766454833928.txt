@@ -1,0 +1,86 @@
+1. Arquitetura técnica e organização do código (base obrigatória)
+
+Prompt:
+
+Refatore o projeto para uma arquitetura front-end organizada e escalável.
+
+Separe completamente HTML, CSS e JavaScript (nenhum CSS inline ou <style> no HTML).
+
+Crie uma pasta /assets para imagens, PDFs e ícones, já referenciando corretamente os arquivos existentes.
+
+Crie uma pasta /styles com arquivos CSS modulares (ex: base.css, layout.css, components.css, pages.css).
+
+Utilize variáveis CSS (:root) para cores, tipografia e espaçamentos, facilitando manutenção e identidade visual.
+
+Garanta responsividade mobile-first e boa performance (evitar imagens oversized, usar loading="lazy").
+
+2. Página inicial com narrativa profissional (storytelling)
+
+Prompt:
+
+Reestruture a home page para contar uma narrativa profissional clara:
+
+Seção Hero com nome, área de atuação (Lazer e Turismo), e uma frase de posicionamento profissional.
+
+Seção “Sobre mim” com foco em turismo cultural, patrimônio, sustentabilidade e território.
+
+Seção de destaques com 3 projetos principais (cards clicáveis).
+
+Call-to-action claro para “Ver Projetos” e “Baixar Currículo (PDF)”.
+O design deve ser elegante, acadêmico e contemporâneo, evitando visual genérico.
+
+3. Aba de Projetos (detalhamento profundo + carrossel)
+
+(Complementa o que você já pensou, levando ao nível profissional)
+
+Prompt:
+
+Crie uma página dedicada “Projetos” com a seguinte estrutura:
+
+Grid de cards de projetos (imagem, título, local/tema, tipo de projeto).
+
+Ao clicar, abrir uma página ou modal com:
+
+Descrição detalhada do projeto
+
+Objetivos
+
+Metodologia aplicada
+
+Resultados / aprendizados
+
+Carrossel de imagens usando os arquivos já presentes em /assets
+
+O carrossel deve ser acessível (teclado), responsivo e com navegação suave.
+
+4. Seção acadêmica e intelectual (diferencial forte)
+
+Prompt:
+
+Crie uma seção “Produção Acadêmica e Intelectual” destacando:
+
+Trabalhos acadêmicos (ex: TCC, artigos, projetos de pesquisa).
+
+Cada item deve ter resumo curto e botão “Baixar PDF”.
+
+Diferencie visualmente projetos práticos de produção acadêmica.
+
+Utilize ícones sutis para indicar tipo de material (artigo, relatório, apresentação).
+
+5. Página de Currículo / Downloads
+
+Prompt:
+
+Crie uma página “Currículo” com:
+
+Linha do tempo (timeline) acadêmica e profissional.
+
+Competências organizadas por categorias (Pesquisa, Planejamento Turístico, Patrimônio, Gestão).
+
+Botões claros para download de:
+
+Currículo em PDF
+
+Portfólio em PDF
+
+Os botões devem usar os PDFs já anexados ao projeto.

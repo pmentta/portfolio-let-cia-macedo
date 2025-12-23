@@ -1,0 +1,349 @@
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
+  color: var(--white);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  color: var(--white);
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-tight);
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--secondary);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 300;
+}
+
+.hero-tagline {
+  font-size: var(--font-size-base);
+  color: #ecf0f1;
+  margin-bottom: var(--spacing-2xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Cards */
+.card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow);
+  transition: all var(--transition-normal);
+  border: 1px solid #f0f0f0;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.card-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.card-title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.card-meta {
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-footer {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+/* Project Card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+}
+
+.project-tag {
+  display: inline-block;
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 20px;
+  font-size: var(--font-size-xs);
+  margin-bottom: var(--spacing-md);
+  width: fit-content;
+}
+
+.project-tag.academic {
+  background-color: var(--accent);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: var(--spacing-xl) 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--light-bg);
+}
+
+.timeline-item {
+  margin-bottom: var(--spacing-2xl);
+  padding-left: var(--spacing-2xl);
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--secondary);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 3px var(--light-bg);
+}
+
+.timeline-date {
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+}
+
+.timeline-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.timeline-org {
+  color: var(--text-light);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.skill-category {
+  background: var(--light-bg);
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+}
+
+.skill-category-title {
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--primary);
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.skill-tag {
+  background: var(--white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 20px;
+  font-size: var(--font-size-sm);
+  border: 1px solid var(--border);
+  transition: all var(--transition-fast);
+}
+
+.skill-tag:hover {
+  background: var(--secondary);
+  color: var(--white);
+  border-color: var(--secondary);
+}
+
+/* Download Button */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.download-btn::before {
+  content: '⬇';
+}
+
+/* About Section */
+.about-content {
+  background: var(--light-bg);
+  padding: var(--spacing-2xl);
+  border-radius: 8px;
+  line-height: var(--line-height-loose);
+}
+
+.about-content p {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Contact Info */
+.contact-info {
+  background: var(--light-bg);
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  margin-top: var(--spacing-xl);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: var(--primary);
+  min-width: 100px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: var(--white);
+  padding: var(--spacing-2xl);
+  border-radius: 8px;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease-in-out;
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  font-size: var(--font-size-xl);
+  cursor: pointer;
+  background: none;
+  padding: 0;
+}
+
+.modal-close:hover {
+  color: var(--accent);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 50vh;
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    gap: var(--spacing-md);
+  }
+
+  .timeline::before {
+    left: -2px;
+  }
+
+  .timeline-item {
+    padding-left: var(--spacing-xl);
+  }
+
+  .timeline-item::before {
+    left: -10px;
+  }
+
+  .modal-content {
+    margin: var(--spacing-lg);
+    max-width: calc(100% - var(--spacing-2xl));
+  }
+}

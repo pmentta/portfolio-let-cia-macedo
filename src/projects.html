@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos | Letícia Macedo Pinheiro</title>
+  
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/pages.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">LETÍCIA</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projects.html">Projetos</a></li>
+          <li><a href="academic.html">Acadêmico</a></li>
+          <li><a href="cv.html">Currículo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Meus Projetos</h1>
+        <p>Destaques profissionais em gestão de projetos, turismo e patrimônio cultural</p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section">
+      <div class="container">
+        <!-- Filters -->
+        <div class="projects-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="professional">Profissionais</button>
+          <button class="filter-btn" data-filter="cultural">Culturais</button>
+          <button class="filter-btn" data-filter="operational">Operacionais</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-3">
+          <!-- UNESCO Chapada -->
+          <div class="card project-card" data-project="cultural" onclick="openModal('modal-chapada-full')">
+            <div class="project-tag">UNESCO • Patrimônio</div>
+            <h3 class="card-title">Turismo e Patrimônio Mundial</h3>
+            <p class="card-meta text-light">Chapada do Araripe, Ceará • 2024-2025</p>
+            <p>
+              Coordenação de projeto UNITWIN UNESCO para candidatura da Chapada do Araripe à Lista de Patrimônio 
+              Mundial. Gestão logística, comunicação intercultural e pesquisa aplicada.
+            </p>
+            <p style="text-align: center; margin-top: auto; color: var(--secondary); font-weight: 600;">→ Ver detalhes</p>
+          </div>
+
+          <!-- Bridge -->
+          <div class="card project-card" data-project="professional" onclick="openModal('modal-bridge')">
+            <div class="project-tag">Startup • Gestão</div>
+            <h3 class="card-title">Bridge - COO & Cofundadora</h3>
+            <p class="card-meta text-light">São Paulo • 2025 - Presente</p>
+            <p>
+              Liderança da organização interna e fortalecimento institucional desde a fundação. Estruturação de 
+              processos administrativos, gestão cultural organizacional e estratégia de parcerias.
+            </p>
+            <p style="text-align: center; margin-top: auto; color: var(--secondary); font-weight: 600;">→ Ver detalhes</p>
+          </div>
+
+          <!-- TTW Group -->
+          <div class="card project-card" data-project="operational" onclick="openModal('modal-ttw')">
+            <div class="project-tag">Turismo • B2B</div>
+            <h3 class="card-title">TTW Group - Operações Turísticas</h3>
+            <p class="card-meta text-light">São Paulo • 2024-2025</p>
+            <p>
+              Assistência em operações de turismo de luxo. Gestão de roteiros tailor-made, comunicação com DMCs 
+              internacionais, crosscheck de itinerários e negociação de cotações.
+            </p>
+            <p style="text-align: center; margin-top: auto; color: var(--secondary); font-weight: 600;">→ Ver detalhes</p>
+          </div>
+
+          <!-- Observatório -->
+          <div class="card project-card" data-project="cultural" onclick="openModal('modal-observatory-full')">
+            <div class="project-tag">Observatório • Turismo</div>
+            <h3 class="card-title">Observatório de Turismo AMITESP</h3>
+            <p class="card-meta text-light">São Paulo • 2023</p>
+            <p>
+              Monitoria na organização do lançamento oficial do Observatório de Turismo em parceria AMITESP-EACH-USP. 
+              Evento reunindo municípios turísticos do Estado de São Paulo.
+            </p>
+            <p style="text-align: center; margin-top: auto; color: var(--secondary); font-weight: 600;">→ Ver detalhes</p>
+          </div>
+
+          <!-- Research Child Labor -->
+          <div class="card project-card" data-project="cultural" onclick="openModal('modal-research-full')">
+            <div class="project-tag academic">Pesquisa • Mídia</div>
+            <h3 class="card-title">Trabalho Infantil Doméstico na Mídia</h3>
+            <p class="card-meta text-light">USP • 2022-2023</p>
+            <p>
+              Pesquisa científica analisando 71 artigos de portais de notícias sobre trabalho infantil doméstico. 
+              Publicado no SIICUSP 2023 - Gestão de Políticas Públicas.
+            </p>
+            <p style="text-align: center; margin-top: auto; color: var(--secondary); font-weight: 600;">→ Ver detalhes</p>
+          </div>
+
+          <!-- Semana de Lazer -->
+          <div class="card project-card" data-project="cultural" onclick="openModal('modal-semana')">
+            <div class="project-tag">Acadêmico • Evento</div>
+            <h3 class="card-title">Semana de Lazer e Turismo USP</h3>
+            <p class="card-meta text-light">São Paulo • 2022-2023</p>
+            <p>
+              Participação ativa na organização de eventos acadêmicos da USP focados em Hotelaria e temáticas 
+              de Comida Sagrada/Afetiva. Coordenação de atividades e mediação.
+            </p>
+            <p style="text-align: center; margin-top: auto; color: var(--secondary); font-weight: 600;">→ Ver detalhes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <!-- Chapada Full Modal -->
+  <div id="modal-chapada-full" class="modal" data-modal>
+    <div class="modal-content">
+      <button class="modal-close">✕</button>
+      <h2>Turismo e Patrimônio Mundial - Chapada do Araripe</h2>
+      <p class="text-light"><strong>Período:</strong> Agosto 2024 - Outubro 2025</p>
+      <p class="text-light"><strong>Organização:</strong> Universidade de São Paulo (USP) & UNESCO UNITWIN</p>
+
+      <h3>Sobre o Projeto</h3>
+      <p>
+        Projeto "Turismo e Patrimônio Mundial" da Rede UNITWIN UNESCO sobre Cultura, Turismo e Desenvolvimento, 
+        coordenado pela Universidade de São Paulo. Foco na preparação de dossiê de candidatura da Chapada do Araripe 
+        (Ceará) à Lista do Patrimônio Mundial da UNESCO.
+      </p>
+
+      <p class="highlight-box">
+        <strong>Context:</strong> A Chapada do Araripe abriga um UNESCO Global Geopark desde 2006 (primeiro nas 
+        Américas) e foi adicionada à Tentative List em fevereiro de 2024.
+      </p>
+
+      <h3>Objetivos Principais</h3>
+      <ul style="margin-left: var(--spacing-lg); line-height: var(--line-height-loose);">
+        <li>Organizar expedição acadêmica multidisciplinar para Cariri (CE) em junho 2025</li>
+        <li>Preparar dossiê técnico considerando perspectivas de desenvolvimento sustentável e sociobiodiversidade</li>
+        <li>Promover abordagem de turismo de base comunitária na patrimonialização</li>
+        <li>Fortalecer diálogo entre pesquisadores e comunidades locais</li>
+        <li>Articulação com parceiros internacionais da Rede UNITWIN</li>
+      </ul>
+
+      <h3>Minhas Contribuições</h3>
+      <ul style="margin-left: var(--spacing-lg); line-height: var(--line-height-loose);">
+        <li><strong>Coordenação Logística:</strong> Planejamento e organização de expedição de campo</li>
+        <li><strong>Comunicação Institucional:</strong> Tradução e redação de materiais em Português-Inglês</li>
+        <li><strong>Suporte Administrativo:</strong> Gestão de agendas, reuniões remotas, ferramentas colaborativas</li>
+        <li><strong>Tradução e Interpretação:</strong> Apoio em reuniões com parceiros internacionais</li>
+        <li><strong>Mediação Cultural:</strong> Interface entre USP, Fundação Casa Grande e stakeholders locais</li>
+        <li><strong>Representação Institucional:</strong> Participação em eventos e apresentações públicas</li>
+      </ul>
+
+      <h3>Aprendizados e Impacto</h3>
+      <p>
+        Este projeto consolidou minha expertise em:
+      </p>
+      <ul style="margin-left: var(--spacing-lg);">
+        <li>Gestão de projetos culturais de escopo internacional</li>
+        <li>Comunicação intercultural em contextos acadêmicos</li>
+        <li>Coordenação de stakeholders em diferentes níveis (local, regional, nacional, internacional)</li>
+        <li>Práticas de turismo sustentável e patrimonialização inclusiva</li>
+      </ul>
+
+      <p class="highlight-box accent">
+        Participação prevista on-site no VI Seminário Internacional na Chapada do Araripe em 2025.
+      </p>
+    </div>
+  </div>
+
+  <!-- Bridge Modal -->
+  <div id="modal-bridge" class="modal" data-modal>
+    <div class="modal-content">
+      <button class="modal-close">✕</button>
+      <h2>Bridge - Cofundadora & COO</h2>
+      <p class="text-light"><strong>Período:</strong> Fevereiro 2025 - Presente</p>
+      <p class="text-light"><strong>Localização:</strong> São Paulo, SP</p>
+
+      <h3>Descrição da Função</h3>
+      <p>
+        Atuação como Chief Operating Officer (COO) e Cofundadora da Bridge, focando na organização interna 
+        e fortalecimento institucional da startup desde sua fundação.
+      </p>
+
+      <h3>Responsabilidades Principais</h3>
+      <ul style="margin-left: var(--spacing-lg); line-height: var(--line-height-loose);">
+        <li><strong>Estruturação Administrativa:</strong> Desenho de rotinas administrativas e processos operacionais</li>
+        <li><strong>Gestão Organizacional:</strong> Desenvolvimento de cultura organizacional alinhada com valores</li>
+        <li><strong>Representação Institucional:</strong> Participação em eventos, seminários e apresentações públicas</li>
+        <li><strong>Estratégia de Parcerias:</strong> Captação de recursos financeiros e intelectuais</li>
+        <li><strong>Perspectiva ESG:</strong> Integração de práticas centradas no humano e sustentabilidade</li>
+        <li><strong>Desenvolvimento de Produtos:</strong> Contribuição estratégica na melhoria de serviços</li>
+      </ul>
+
+      <h3>Áreas de Impacto</h3>
+      <p>
+        Responsável por criar fundações sólidas para crescimento sustentável da organização, 
+        balanceando eficiência operacional com valores humanísticos e de impacto social.
+      </p>
+    </div>
+  </div>
+
+  <!-- TTW Modal -->
+  <div id="modal-ttw" class="modal" data-modal>
+    <div class="modal-content">
+      <button class="modal-close">✕</button>
+      <h2>TTW Group - Operações Turísticas B2B</h2>
+      <p class="text-light"><strong>Período:</strong> Abril 2024 - Maio 2025</p>
+      <p class="text-light"><strong>Posição:</strong> Junior Operations Assistant B2B</p>
+
+      <h3>Descrição</h3>
+      <p>
+        Suporte operacional direto a consultores seniores em turismo de luxo, contribuindo para a entrega 
+        de experiências de viagem tailor-made de altíssimo padrão para clientes globais.
+      </p>
+
+      <h3>Responsabilidades Principais</h3>
+      <ul style="margin-left: var(--spacing-lg); line-height: var(--line-height-loose);">
+        <li><strong>Preparação de Itinerários:</strong> Customização e documentação de roteiros de viagem premium</li>
+        <li><strong>Comunicação B2B:</strong> Interface com DMCs e fornecedores internacionais via email e telefone</li>
+        <li><strong>Crosscheck de Serviços:</strong> Verificação rigorosa de todos os componentes da viagem (meta: 0% erro)</li>
+        <li><strong>Gestão de Cotações:</strong> Solicitação, análise e negociação de preços com fornecedores</li>
+        <li><strong>Atualizações Operacionais:</strong> Relatório contínuo ao time de vendas sobre progresso</li>
+        <li><strong>Atendimento ao Cliente:</strong> Entrega de materiais e confirmações finais</li>
+      </ul>
+
+      <h3>Habilidades Desenvolvidas</h3>
+      <ul style="margin-left: var(--spacing-lg);">
+        <li>Operações de turismo de luxo complexas</li>
+        <li>Comunicação profissional em inglês (fluente)</li>
+        <li>Atenção a detalhes e qualidade premium</li>
+        <li>Gestão de relacionamento com fornecedores globais</li>
+        <li>Fluência em sistemas de reservas turísticas</li>
+        <li>Coordenação de múltiplos stakeholders simultâneos</li>
+      </ul>
+
+      <p class="highlight-box">
+        Experiência consolidada em operações complexas de turismo internacional com padrões de excelência.
+      </p>
+    </div>
+  </div>
+
+  <!-- Observatory Full Modal -->
+  <div id="modal-observatory-full" class="modal" data-modal>
+    <div class="modal-content">
+      <button class="modal-close">✕</button>
+      <h2>Observatório de Turismo - AMITESP</h2>
+      <p class="text-light"><strong>Período:</strong> Junho 2023</p>
+      <p class="text-light"><strong>Organização:</strong> AMITESP & EACH-USP</p>
+
+      <h3>Contexto</h3>
+      <p>
+        Lançamento oficial do "Tourism Observatory of the Association of Municipalities of Tourist Interest of the 
+        State of São Paulo" - projeto de parceria entre AMITESP (Associação de Municípios com Interesses Turísticos) 
+        e Escola de Artes, Ciências e Humanidades da USP (EACH-USP).
+      </p>
+
+      <h3>Objetivos</h3>
+      <ul style="margin-left: var(--spacing-lg); line-height: var(--line-height-loose);">
+        <li>Criar plataforma de observatório para monitoramento de turismo em municípios turísticos do SP</li>
+        <li>Facilitar acesso a dados, indicadores e análises para gestão pública</li>
+        <li>Fortalecer redes de cooperação entre municípios turísticos</li>
+        <li>Promover pesquisa aplicada e desenvolvimento de políticas públicas</li>
+      </ul>
+
+      <h3>Minhas Atividades</h3>
+      <ul style="margin-left: var(--spacing-lg); line-height: var(--line-height-loose);">
+        <li>Participação como monitora na organização logística do evento</li>
+        <li>Recepção, orientação e acolhimento de participantes</li>
+        <li>Coordenação de atividades e transição entre apresentações</li>
+        <li>Mediação entre organizadores, palestrantes e audiência</li>
+        <li>Suporte na documentação e registro do evento</li>
+      </ul>
+
+      <p class="highlight-box">
+        Certificação obtida pela participação como monitora - "Tourism Observatory of the Association of 
+        Municipalities of Tourist Interest of the State of São Paulo"
+      </p>
+    </div>
+  </div>
+
+  <!-- Research Full Modal -->
+  <div id="modal-research-full" class="modal" data-modal>
+    <div class="modal-content">
+      <button class="modal-close">✕</button>
+      <h2>Trabalho Infantil Doméstico na Mídia Digital Brasileira</h2>
+      <p class="text-light"><strong>Período:</strong> Agosto 2022 - Outubro 2023</p>
+      <p class="text-light"><strong>Instituição:</strong> Universidade de São Paulo (EACH-USP)</p>
+
+      <h3>Descrição do Projeto</h3>
+      <p>
+        Pesquisa científica desenvolvida na Escola de Artes, Ciências e Humanidades (EACH-USP) como parte 
+        do curso ACH1603 – Produção do Conhecimento Científico em Lazer e Turismo. O projeto analisou como 
+        portais de notícias digitais brasileiros retratam trabalho infantil doméstico.
+      </p>
+
+      <h3>Questões de Pesquisa</h3>
+      <ul style="margin-left: var(--spacing-lg); line-height: var(--line-height-loose);">
+        <li>Como a mídia expõe ou naturaliza o trabalho infantil doméstico?</li>
+        <li>Como gênero, raça e classe interseccionam nas narrativas?</li>
+        <li>Como a pandemia COVID-19 intensificou essas representações?</li>
+        <li>Qual é o papel das políticas públicas nas reportagens?</li>
+      </ul>
+
+      <h3>Metodologia</h3>
+      <ul style="margin-left: var(--spacing-lg); line-height: var(--line-height-loose);">
+        <li><strong>Amostra:</strong> 71 artigos de notícias (Folha, Estadão, UOL, CNN, BBC Brasil)</li>
+        <li><strong>Método:</strong> Análise de Conteúdo (Bardin)</li>
+        <li><strong>Período:</strong> Análise comparativa antes/durante pandemia</li>
+        <li><strong>Categorias:</strong> Gênero, raça, classe, política pública, visibilidade midiática</li>
+      </ul>
+
+      <h3>Minhas Contribuições Específicas</h3>
+      <ul style="margin-left: var(--spacing-lg); line-height: var(--line-height-loose);">
+        <li>Condução de análise de conteúdo de 71 artigos</li>
+        <li>Codificação qualitativa e categorização de dados</li>
+        <li>Organização de dados em planilhas estruturadas</li>
+        <li>Produção de gráficos e visualizações analíticas</li>
+        <li>Assistência em revisão bibliográfica</li>
+        <li>Contribuição na formulação de hipóteses</li>
+        <li>Co-autoria do relatório final</li>
+        <li>Apresentação em fórum acadêmico</li>
+      </ul>
+
+      <h3>Resultado & Publicação</h3>
+      <p>
+        <strong>Título:</strong> "The Domestic Care Work Performed By Children and Adolescents and Its Visibility 
+        on Brazilian Digital News Portals"
+      </p>
+      <p>
+        <strong>Apresentado:</strong> 31º Simpósio Internacional de Iniciação Científica e Tecnológica da USP (SIICUSP)
+      </p>
+      <p>
+        <strong>Registro:</strong> Nº 2359 | <strong>ISSN:</strong> 2448-072X | <strong>Área Temática:</strong> Gestão de Políticas Públicas
+      </p>
+
+      <p class="highlight-box accent">
+        Este trabalho fortaleceu minhas habilidades em pesquisa qualitativa, pensamento crítico, análise 
+        de políticas públicas e colaboração acadêmica interdisciplinar.
+      </p>
+    </div>
+  </div>
+
+  <!-- Semana Modal -->
+  <div id="modal-semana" class="modal" data-modal>
+    <div class="modal-content">
+      <button class="modal-close">✕</button>
+      <h2>Semana de Lazer e Turismo USP</h2>
+      <p class="text-light"><strong>Período:</strong> 2022-2023</p>
+      <p class="text-light"><strong>Organização:</strong> EACH-USP</p>
+
+      <h3>Descrição</h3>
+      <p>
+        Participação ativa na organização e execução de eventos acadêmicos da Universidade de São Paulo 
+        focados em Lazer, Turismo, Hotelaria e temáticas especiais como Comida Sagrada/Afetiva.
+      </p>
+
+      <h3>Atividades Desenvolvidas</h3>
+      <ul style="margin-left: var(--spacing-lg); line-height: var(--line-height-loose);">
+        <li>Coordenação de programação de eventos</li>
+        <li>Logística e suporte operacional</li>
+        <li>Mediação entre palestrantes e audiência</li>
+        <li>Acolhimento de participantes</li>
+        <li>Documentação e produção de conteúdo</li>
+      </ul>
+
+      <h3>Aprendizados</h3>
+      <p>
+        Experiência consolidada em organização de eventos acadêmicos, mediação cultural e promoção 
+        de discussões sobre turismo sustentável, hospitalidade e patrimônio gastronômico.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Navegação</h4>
+          <ul style="list-style: none;">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projects.html">Projetos</a></li>
+            <li><a href="academic.html">Acadêmico</a></li>
+            <li><a href="cv.html">Currículo</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contato</h4>
+          <ul style="list-style: none;">
+            <li><a href="mailto:leticiasuika@gmail.com">leticiasuika@gmail.com</a></li>
+            <li><a href="tel:+5511940704131">(11) 94070-4131</a></li>
+            <li><a href="https://www.linkedin.com/in/leticiamacedopinheiro" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Sobre</h4>
+          <p>Profissional multidisciplinar em Cultura, Patrimônio e Turismo Sustentável. Graduanda USP.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Letícia Macedo Pinheiro. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
