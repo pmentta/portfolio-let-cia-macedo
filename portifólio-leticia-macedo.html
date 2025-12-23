@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letícia Pinheiro | Perfil Acadêmico e Profissional</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #2c3e50;    /* Azul Escuro Profissional */
+            --secondary: #487d77;  /* Verde Sálvia (Turismo/Meio Ambiente) */
+            --accent: #a94b3d;     /* Terracota (Cultura/Patrimônio) */
+            --neutral: #e1d1d7;    /* Lavanda Acinzentado (Fundo/Detalhes) */
+            --white: #ffffff;
+            --text: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+        }
+
+        /* --- Animações --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Header & Nav --- */
+        header {
+            background: var(--white);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            margin-left: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .lang-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: var(--accent);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(135deg, var(--neutral) 0%, #fff 100%);
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            max-width: 600px;
+            font-weight: 400;
+        }
+
+        /* --- Sections --- */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            margin: 10px auto;
+        }
+
+        /* --- Habilidades (Skills) --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border-bottom: 4px solid var(--secondary);
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        /* --- Projetos --- */
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .project-item {
+            display: flex;
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .project-img {
+            flex: 1;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            min-height: 250px;
+        }
+
+        .project-info {
+            flex: 2;
+            padding: 40px;
+        }
+
+        .project-info h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--neutral);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* --- Contato --- */
+        .contact-box {
+            background: var(--primary);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .contact-info h2 { color: white; margin-bottom: 20px; }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item i {
+            margin-right: 15px;
+            color: var(--neutral);
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #eee;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .project-item { flex-direction: column; }
+            header { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h3 style="font-family: 'Lato'; letter-spacing: 2px;">LETÍCIA PINHEIRO</h3>
+    </div>
+    <nav class="nav-links">
+        <a href="#about" data-i18n="nav-about">Sobre</a>
+        <a href="#skills" data-i18n="nav-skills">Habilidades</a>
+        <a href="#projects" data-i18n="nav-projects">Projetos</a>
+        <a href="#contact" data-i18n="nav-contact">Contato</a>
+        <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1 data-i18n="hero-title">Pesquisa, Cultura e Turismo</h1>
+        <p data-i18n="hero-subtitle">Graduanda em Lazer e Turismo pela USP. Focada em práticas interculturais, patrimonialização e turismo de base comunitária.</p>
+    </div>
+</section>
+
+<section id="about" class="reveal">
+    <h2 class="section-title" data-i18n="about-title">Trajetória Profissional</h2>
+    <div class="projects-container">
+        <!-- Bridge -->
+        <div class="project-item">
+            <div class="project-info">
+                <span class="tag">Atualmente</span>
+                <h3 data-i18n="exp1-title">Cofundadora & COO - Bridge</h3>
+                <p data-i18n="exp1-desc">Responsável pela estruturação de rotinas administrativas e processos operacionais, fortalecimento institucional e gestão de cultura organizacional com foco em ESG.</p>
+            </div>
+        </div>
+        <!-- USP UNESCO -->
+        <div class="project-item">
+            <div class="project-info">
+                <span class="tag">Pesquisa</span>
+                <h3 data-i18n="exp2-title">Bolsista de Extensão - USP & UNESCO UniTwin</h3>
+                <p data-i18n="exp2-desc">Apoio na candidatura da Chapada do Araripe a Patrimônio Mundial da UNESCO. Coordenação intercultural e logística de expedições acadêmicas.</p>
+            </div>
+        </div>
+        <!-- TTW -->
+        <div class="project-item">
+            <div class="project-info">
+                <span class="tag">Turismo de Luxo</span>
+                <h3 data-i18n="exp3-title">Assistente de Operações B2B - TTWGroup</h3>
+                <p data-i18n="exp3-desc">Suporte operacional no turismo de luxo, elaboração de roteiros personalizados e negociação com fornecedores internacionais (DMCs).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" style="background: var(--neutral);" class="reveal">
+    <h2 class="section-title" data-i18n="skills-title">Habilidades & Competências</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <i class="fa-solid fa-earth-americas"></i>
+            <h3 data-i18n="skill1-title">Interculturalidade</h3>
+            <p data-i18n="skill1-desc">Inglês fluente e experiência em coordenação de redes internacionais (UNESCO).</p>
+        </div>
+        <div class="skill-card">
+            <i class="fa-solid fa-list-check"></i>
+            <h3 data-i18n="skill2-title">Gestão de Projetos</h3>
+            <p data-i18n="skill2-desc">Estruturação de processos operacionais e rotinas administrativas eficientes.</p>
+        </div>
+        <div class="skill-card">
+            <i class="fa-solid fa-building-columns"></i>
+            <h3 data-i18n="skill3-title">Patrimônio & Cultura</h3>
+            <p data-i18n="skill3-desc">Pesquisa aplicada em patrimonialização e turismo de base comunitária.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="reveal">
+    <h2 class="section-title" data-i18n="projects-title">Destaques Acadêmicos</h2>
+    <div class="projects-container">
+        <div class="project-item">
+            <div class="project-img" style="background-color: var(--accent);">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="project-info">
+                <h3 data-i18n="proj1-title">Iniciação Científica (SIICUSP)</h3>
+                <p data-i18n="proj1-desc">Análise do trabalho doméstico infantil em portais digitais brasileiros. Pesquisa publicada e apresentada no 31º Simpósio Internacional da USP.</p>
+            </div>
+        </div>
+        <div class="project-item">
+            <div class="project-img" style="background-color: var(--secondary);">
+                <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div class="project-info">
+                <h3 data-i18n="proj2-title">Observatório de Turismo</h3>
+                <p data-i18n="proj2-desc">Monitoria no lançamento do Observatório de Turismo da AMITESP em parceria com a EACH-USP.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="reveal">
+    <div class="contact-box">
+        <div class="contact-info">
+            <h2 data-i18n="contact-title">Vamos conversar?</h2>
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:leticiasuika@gmail.com">leticiasuika@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+55 11 94070-4131</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://linkedin.com/in/leticiamacedopinheiro" target="_blank">linkedin.com/in/leticiamacedopinheiro</a>
+            </div>
+        </div>
+        <div class="contact-academic">
+            <i class="fa-solid fa-graduation-cap" style="font-size: 5rem; opacity: 0.3;"></i>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Letícia Macedo Pinheiro | EACH-USP</p>
+</footer>
+
+<script>
+    // --- Gerenciador de Idiomas ---
+    const translations = {
+        'pt': {
+            'nav-about': 'Sobre',
+            'nav-skills': 'Habilidades',
+            'nav-projects': 'Projetos',
+            'nav-contact': 'Contato',
+            'hero-title': 'Pesquisa, Cultura e Turismo',
+            'hero-subtitle': 'Graduanda em Lazer e Turismo pela USP. Focada em práticas interculturais, patrimonialização e turismo de base comunitária.',
+            'about-title': 'Trajetória Profissional',
+            'exp1-title': 'Cofundadora & COO - Bridge',
+            'exp1-desc': 'Responsável pela estruturação de rotinas administrativas e processos operacionais, fortalecimento institucional e gestão de cultura organizacional com foco em ESG.',
+            'exp2-title': 'Bolsista de Extensão - USP & UNESCO UniTwin',
+            'exp2-desc': 'Apoio na candidatura da Chapada do Araripe a Patrimônio Mundial da UNESCO. Coordenação intercultural e logística de expedições acadêmicas.',
+            'exp3-title': 'Assistente de Operações B2B - TTWGroup',
+            'exp3-desc': 'Suporte operacional no turismo de luxo, elaboração de roteiros personalizados e negociação com fornecedores internacionais.',
+            'skills-title': 'Habilidades & Competências',
+            'skill1-title': 'Interculturalidade',
+            'skill1-desc': 'Inglês fluente e experiência em coordenação de redes internacionais (UNESCO).',
+            'skill2-title': 'Gestão de Projetos',
+            'skill2-desc': 'Estruturação de processos operacionais e rotinas administrativas eficientes.',
+            'skill3-title': 'Patrimônio & Cultura',
+            'skill3-desc': 'Pesquisa aplicada em patrimonialização e turismo de base comunitária.',
+            'projects-title': 'Destaques Acadêmicos',
+            'proj1-title': 'Iniciação Científica (SIICUSP)',
+            'proj1-desc': 'Análise do trabalho doméstico infantil em portais digitais brasileiros. Apresentada no 31º Simpósio Internacional da USP.',
+            'proj2-title': 'Observatório de Turismo',
+            'proj2-desc': 'Monitoria no lançamento do Observatório de Turismo da AMITESP em parceria com a EACH-USP.',
+            'contact-title': 'Vamos conversar?',
+        },
+        'en': {
+            'nav-about': 'About',
+            'nav-skills': 'Skills',
+            'nav-projects': 'Projects',
+            'nav-contact': 'Contact',
+            'hero-title': 'Research, Culture & Tourism',
+            'hero-subtitle': 'Leisure and Tourism student at USP. Focused on intercultural practices, heritage-making, and community-based tourism.',
+            'about-title': 'Professional Background',
+            'exp1-title': 'Co-founder & COO - Bridge',
+            'exp1-desc': 'Responsible for structuring administrative routines and operational processes, institutional strengthening, and organizational culture management with an ESG focus.',
+            'exp2-title': 'Extension Fellow - USP & UNESCO UniTwin',
+            'exp2-desc': 'Support for the nomination of Chapada do Araripe as a UNESCO World Heritage site. Intercultural coordination and logistics for academic field trips.',
+            'exp3-title': 'Junior Operations Assistant B2B - TTWGroup',
+            'exp3-desc': 'Operational support in luxury tourism, creating customized itineraries and negotiating with international providers.',
+            'skills-title': 'Expertise & Skills',
+            'skill1-title': 'Interculturality',
+            'skill1-desc': 'Fluent English and experience in coordinating international networks (UNESCO).',
+            'skill2-title': 'Project Management',
+            'skill2-desc': 'Structuring operational processes and efficient administrative routines.',
+            'skill3-title': 'Heritage & Culture',
+            'skill3-desc': 'Applied research in heritage-making and community-based tourism.',
+            'projects-title': 'Academic Highlights',
+            'proj1-title': 'Scientific Research (SIICUSP)',
+            'proj1-desc': 'Analysis of child domestic labor in Brazilian digital portals. Presented at USP\'s 31st International Symposium.',
+            'proj2-title': 'Tourism Observatory',
+            'proj2-desc': 'Monitor for the launch of the AMITESP Tourism Observatory in partnership with EACH-USP.',
+            'contact-title': 'Let\'s connect?',
+        }
+    };
+
+    let currentLang = 'pt';
+
+    function toggleLanguage() {
+        currentLang = currentLang === 'pt' ? 'en' : 'pt';
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            element.innerText = translations[currentLang][key];
+        });
+        document.querySelector('.lang-btn').innerText = currentLang === 'pt' ? 'EN' : 'PT';
+    }
+
+    // --- Animação de Scroll ---
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    reveal(); // Rodar uma vez ao carregar
+</script>
+
+</body>
+</html>
